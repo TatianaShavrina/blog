@@ -2,8 +2,8 @@
 # Must be the same as `author` in `_config.yml`.
 # Change `author1` to your shortname.
 author1:
-  name:              <firstname> <lastname>
-  email:             <mail@domain.tld>
+  name:              Shavrina Tatiana
+  email:             rybolos@domain.com
 
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
@@ -26,11 +26,11 @@ author1:
   # Comment/uncommet to show/hide
   # Rearrange to change the order in which they appear
   social:
-    twitter:         <username>
-    github:          <username>
-    # email:           mailto:<mail@domain.tld>
+    #twitter:         <username>
+    github:          tatianashavrina
+     email:           mailto:rybolos@domain.com
     # rss:             https://<url>/feed.xml
-    # facebook:        <username>
+    facebook:        rybolos@domain.com
     # google:          <number>
     # vk:              <username>
     # youtube:         <string_string_string>
