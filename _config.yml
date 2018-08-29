@@ -225,7 +225,7 @@ plugins:
 #   admins:              <id>
 
 # Used on index and about sites
- social:
+social:
    name:                Tatiana Shavrina
    links:
 #     - https://twitter.com/<username>
