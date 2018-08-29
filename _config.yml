@@ -4,7 +4,7 @@
 # IMPORTANT: Set the URL of your site.
 # Set to https://<username>.github.io when hosting on GitHub Pages
 # (unless you are using a custom domain).
-url:                   https://tatianashavrina.github.io
+url: https://tatianashavrina.github.io
 
 # IMPORTANT: Set The "base URL" of your site.
 #
@@ -15,11 +15,11 @@ url:                   https://tatianashavrina.github.io
 # When using GitHub Pages, set to '' when hosting a user- or organization page,
 # i.e. when the name of the repository looks like <username>.github.io.
 # Otherwise, set to /<name of repository> (with leading /, but without the < >).
-baseurl:            /blog    #/blog ''
+baseurl: /blog    #/blog ''
 
 # Language of your content in 2-letter code, e.g.: en, de.
 # You may also provide a location, e.g.: en-us, de_AT.
-lang:                  en
+lang:                  en, ru
 
 # The title of your blog. Used in the sidebar and the browser tab.
 title:                 Natural Language Processing
