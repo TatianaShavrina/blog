@@ -5,7 +5,6 @@
 # Set to https://<username>.github.io when hosting on GitHub Pages
 # (unless you are using a custom domain).
 url:                 https://tatianashavrina.github.io
-
 # IMPORTANT: Set The "base URL" of your site.
 #
 # When hosting your site in a subdirectory of a server, set to /<name of directory>
