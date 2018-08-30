@@ -4,9 +4,9 @@ title: About
 description: >
   See my other projects and publications:
   
-  (Taiga Corpus)[https://tatianashavrina.github.io/taiga_site/]
+  [https://tatianashavrina.github.io/taiga_site/](Taiga Corpus)
   
-  (Papers)[https://scopus.academia.edu/TatianaShavrina]
+  [https://scopus.academia.edu/TatianaShavrina](Papers)
   
 menu: true
 order: 4
