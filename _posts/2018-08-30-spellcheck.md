@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 5 algorithms you need to know to a fast spellchecker
+title: 5 algorithms you need to know to build a fast spellchecker
 description: >
   This is a normal paragraph following a header.
   GitHub is a code hosting platform for version control and collaboration.
