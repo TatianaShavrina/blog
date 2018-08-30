@@ -8,15 +8,13 @@ tags: [NLP, machine learning, data, open source]
 ---
 
 
-Frequent errors in NLP Developement:
+
 ### Text Generation in Keras
  - [Why do my keras text generation results do not reproduce?](/_posts/2018-08-30-keras.md)
  
-ML and Linguistics
 ### Spellchecking
  - [5 algorithms you need to know to build a fast spellchecker](_posts/2018-08-30-spellcheck.md)
  
-Data is all you need:
 ### Data for Russian
  - [An exhaustive list of open-source datasets for Russian](_posts/2018-08-30-datasets.md)
  
