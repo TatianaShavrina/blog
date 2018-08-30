@@ -16,7 +16,7 @@ tags: [NLP, machine learning, data, open source]
  
 ## ML and Linguistics
 ### Spellchecking
- - [5 algorithms you need to know to build a fast spellchecker](_posts/2018-08-30-spellcheck.md)
+ - [5 algorithms you need to know to build a fast spellchecker](https://tatianashavrina.github.io/blog/2018/08/30/spellcheck/)
  
  
 ## Data is all you need:
