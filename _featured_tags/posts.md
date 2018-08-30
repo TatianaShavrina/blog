@@ -5,7 +5,7 @@ slug: hydejack
 menu: true
 order: 2
 description: >
-  
+  Latest posts
 ---
 
 ## Frequent errors in NLP Developement:
