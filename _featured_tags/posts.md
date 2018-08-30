@@ -1,11 +1,10 @@
 ---
 layout: list
 title: Posts
-slug: hydejack
-menu: true
-order: 2
+menu:  true
 description: >
   Latest posts
+tags: [NLP, machine learning, data, open source]
 ---
 
 ## Frequent errors in NLP Developement:
