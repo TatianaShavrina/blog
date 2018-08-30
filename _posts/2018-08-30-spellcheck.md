@@ -2,9 +2,7 @@
 layout: post
 title: 5 algorithms you need to know to build a fast spellchecker
 description: >
-  This is a normal paragraph following a header.
-  GitHub is a code hosting platform for version control and collaboration.
-  It lets you and others work together on projects from anywhere.
+  Spellchecking is an essential part of many products and business applications. However, it's working characteristics (speed, quality, memory consumption) are not optimal - let's see how to make your spell-checker fast and furious.
 tags: [NLP, spellchecking, spelling correction]
 ---
 
