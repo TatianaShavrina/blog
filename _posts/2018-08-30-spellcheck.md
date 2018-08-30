@@ -2,7 +2,7 @@
 layout: post
 title: 5 algorithms you need to know to build a fast spellchecker
 description: >
-  Spellchecking is an essential part of many products and business applications. However, it's working characteristics (speed, quality, memory consumption) are not optimal - let's see how to make your spell-checker fast and furious.
+  Spellchecking is an essential part of many products and business applications. However, it's working characteristics (speed, quality, memory consumption) are often not optimal - let's see how to make your spell-checker fast and furious.
 tags: [NLP, spellchecking, spelling correction]
 ---
 
