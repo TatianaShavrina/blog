@@ -7,7 +7,7 @@ tags: [NLP, spellchecking, spelling correction]
 ---
 
 
-It is more than 10 years already Peter Norvig has put his sterlingly simple spell-checker into 21 line of [https://norvig.com/spell-correct.html](python code). A pure probability model selects the most probable replacement for an unknown word from the list of words collected in a book – this minimalistic approach is still quite relevant and can be considered as a baseline and a prototype for further development, however, it has a number of imperfections:
+It is more than 10 years already Peter Norvig has put his sterlingly simple spell-checker into 21 line of [python code](https://norvig.com/spell-correct.html). A pure probability model selects the most probable replacement for an unknown word from the list of words collected in a book – this minimalistic approach is still quite relevant and can be considered as a baseline and a prototype for further development, however, it has a number of imperfections:
 
 1)	if your dictionary is big enough, (like, millions of words), the candidate list will be too big to range it properly with this simple technique
 
