@@ -93,7 +93,7 @@ font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
 
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
-# disqus:                <disqus_shortname>
+disqus:                https-tatianashavrina-github-io-blog
 
 # Setting a tinyletter username will enable the newsletter subscription box.
 # tinyletter:            <tinyletter_username>
