@@ -11,7 +11,7 @@ tags: [NLP, machine learning, data, open source]
 
 ## Frequent errors in NLP Developement:
 ### Text Generation in Keras
- - [Why do my keras text generation results do not reproduce?](/_posts/2018-08-30-keras.md)
+ - [Why do my keras text generation results do not reproduce?](lhttps://tatianashavrina.github.io/blog/2018/08/30/spellcheck/)
  
  
 ## ML and Linguistics
@@ -21,7 +21,7 @@ tags: [NLP, machine learning, data, open source]
  
 ## Data is all you need:
 ### Data for Russian
- - [An exhaustive list of open-source datasets for Russian](_posts/2018-08-30-datasets.md)
+ - [An exhaustive list of open-source datasets for Russian](lhttps://tatianashavrina.github.io/blog/2018/08/30/spellcheck/)
  
  
  
