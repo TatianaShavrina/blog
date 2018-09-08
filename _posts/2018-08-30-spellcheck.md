@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 5 weird tricks for a good spellchecker
+title: 5 weird tricks for a good spell-checker
 comments: true
 description: >
-  Spellchecking is an essential part of many products and business applications. However, it's working characteristics (speed, quality, memory consumption) are often not optimal - let's see how to make your spell-checker fast and furious.
+  Spell checking is an essential part of many products and business applications. However, it's working characteristics (speed, quality, memory consumption) are often not optimal - let's see how to make your spell-checker fast and furious.
 tags: [NLP, spellchecking, spelling correction]
 ---
 
@@ -11,7 +11,7 @@ tags: [NLP, spellchecking, spelling correction]
 
 It is more than 10 years already Peter Norvig has put his sterlingly simple spell-checker into 21 line of [python code](https://norvig.com/spell-correct.html). A pure probability model selects the most probable replacement for an unknown word from the list of words collected in a book – this minimalistic approach is still quite relevant and can be considered as a baseline and a prototype for further development, however, it has a number of imperfections:
 
-1.	if your dictionary is big enough, (like, millions of words), the candidate list will be too big to range it properly with this simple technique
+1.	if your dictionary is big enough, (like millions of words), the candidate list will be too big to range it properly with this simple technique
 1. no restrictions on the speed and memory are provided for this solution
 1.	it cannot find real-word errors
 
@@ -23,18 +23,18 @@ I will now try to introduce 5 new algorithms and data structures that I use to o
 
 So, getting started: there are two steps in spelling correction: 
   - firstly, you get a dictionary and find errors in the text, 
-  - secondly, you choose the best correction, ranging dictionary candidates
+  - secondly, you choose the best correction, ranking dictionary candidates
 
 
 ## Storing a dictionary
 
-Searching if a word is in a plain dictionary or list structure can take a while, and it can take even more, if you should measure a distance between an out-of-vocabulary word and every word in dictionary to find corrections.
+Searching if a word is in a plain dictionary or list structure can take a while, and it can take even more if you should measure a distance between an out-of-vocabulary word and every word in a dictionary to find corrections.
 
 ### 1. Trie
-Trie, aka radix tree or prefix tree, is a kind of search tree — an ordered tree data structure used to store a dynamic set or associative array where the keys are usually strings. It is kind of similar to binary search tree, but for language data - you have no >< conditions, but variants - what substring would be the next:
+Trie, aka radix tree or prefix tree, is a kind of search tree — an ordered tree data structure used to store a dynamic set or associative array where the keys are usually strings. It is kind of similar to a binary search tree, but for language data - you have no >< conditions, but variants - what substring would be the next:
 ![](https://i.stack.imgur.com/f9Q3u.jpg)
 
-So, all the descendants of a node have a common prefix of the string associated with that node, and the root is associated with the empty string. In Python kind of logics, that corresponds to a recursive dictionary in a dictionary, where keys are letters. This kind of structure is extremely useful when you have to store a dictionary in memory to check if a word is in dictionary - you do not only the amount of memory, but also the search time decreases tens of times, as the search for a key in a dictionary of millions of words is orders of magnitude slower than the sequential search in that descending embedded dictionaries.
+So, all the descendants of a node have a common prefix of the string associated with that node, and the root is associated with the empty string. In Python kind of logic, that corresponds to a recursive dictionary in a dictionary, where keys are letters. This kind of structure is extremely useful when you have to store a dictionary in memory to check if a word is in dictionary - you do not only the amount of memory, but also the search time decreases tens of times, as the search for a key in a dictionary of millions of words is orders of magnitude slower than the sequential search in that descending embedded dictionaries.
 
 You can build an independent trie-vocabulary for every list of words beginning with the same letter (A-, B-, etc), or having this letter last, etc - and thus limit the search for candidates only by these trie-structures.
 
@@ -53,11 +53,11 @@ Now let's move to tricks with word distance and optimal candidate ranging.
 
 ### 2. Bk-trees
 
-A BK-tree is a metric tree suggested by Walter Austin Burkhard and Robert M. Keller[1] specifically adapted to discrete metric spaces. For simplicity, let us consider integer discrete metric d (x, y). Then, BK-tree is defined in the following way: an arbitrary element a is selected as root node. The root node may have zero or more subtrees. The k-th subtree is recursively built of all elements b such that d(a,b)=k. BK-trees can be used for approximate string matching in a dictionary:
+A BK-tree is a metric tree suggested by Walter Austin Burkhard and Robert M. Keller[1] specifically adapted to discrete metric spaces. For simplicity, let us consider integer discrete metric d (x, y). Then, BK-tree is defined in the following way: an arbitrary element a is selected as a root node. The root node may have zero or more subtrees. The k-th subtree is recursively built of all elements b such that d(a,b)=k. BK-trees can be used for approximate string matching in a dictionary:
 
 ![](https://nullwords.files.wordpress.com/2013/03/bk31-e1363207034407.png)
 
-The main profit of using bk-trees instead of plain dictionaries is that measuring distance   between an out-of-vocabulary word and every word in dictionary is much faster in this kind of structure - it's now O(log n) instead of O(n).
+The main profit of using bk-trees instead of plain dictionaries is that measuring the distance between an out-of-vocabulary word and every word in the dictionary is much faster in this kind of structure - it's now O(log n) instead of O(n).
 
 Implementations:
 
@@ -73,14 +73,14 @@ Implementations:
 ### 3. Phonetic Algorithms
 
 Phonetic algorithms are widely used in spellchecking, as they can make the search of a close vocabulary word much more precise:
-  -  if you use some standard distance measure, which is based on letter alighnment, the search is  usually limited to candidates standing 1-2 letters from a word with error. If you increase this distance, you propably get  too much unrelevant candidates.
+  -  if you use some standard distance measure, which is based on letter alignment, the search is  usually limited to candidates standing 1-2 letters from a word with an error. If you increase this distance, you probably get too irrelevant candidates.
   - a lot of typical errors, caused by intentional distortion or slangy language gamification, outstand from a relevant candidate  more than 2 letters away: _riiiiigtht_ --> _right_, _donut_ --> _doughnut_, _ave_--> _avenue_
-  - these far-from-a-right-candidate examples seem to be somehow systematicly located: actually, these errors we can call "phonetic" or "abbreviative", and instead of using ordinary distance measures we can make a new, phonetic distance. Phonetic algorithms solve this problem quite well.
+  - these far-from-a-right-candidate examples seem to be somehow systematically located: actually, these errors we can call "phonetic" or "abbreviative", and instead of using ordinary distance measures we can make a new, phonetic distance. Phonetic algorithms solve this problem quite well.
   
 * **Metaphone**
 
-Metaphone algorithm [2]-[3] is one of the most popular phonetic algorithms on spelling correction. 
-It makes a phonetic hash out of each word in vocabulary, and getting this kind of a hash for a word with error, you can search for a better candadate through your hashed dictionary using standard distance measures.
+Metaphone algorithm [2]-[3] is one of the most popular phonetic algorithms for spelling correction. 
+It makes a phonetic hash out of each word in the vocabulary and getting this kind of a hash for a word with error, you can search for a better candidate through your hashed dictionary using standard distance measures.
 
 Original Metaphone codes use the 16 consonant symbols 0BFHJKLMNPRSTWXY. The '0' represents "th" (as an ASCII approximation of Θ), 'X' represents "sh" or "ch", and the others represent their usual English pronunciations. The vowels AEIOU are also used, but only at the beginning of the code. Text below summarizes most of the rules in the original implementation:
 
@@ -164,12 +164,12 @@ You can, of course, implement your own function - for example, take Damerau–Le
 
 ### 5. Machine Learning for spelling
 
-"See you in five minuets" - this type of errors, when a spelling error leads to appearance of another normal word, is called Real-Word Error.
-Real-word errors (RWE) are harder to find, as you cannot spot them with a dictionary lookup, but the most common approach to find them is context-based.
+"See you in five minuets" - this type of errors, when a spelling error leads to an appearance of another normal word, is called Real-Word Error.
+Real-word errors (RWE) are harder to find, as you cannot spot them with a dictionary lookup, but the most common approach to finding them is context-based.
 
-I will not recommend this type of algorithm for spellcheckers with real-time speed limits, as reachecking every word in a sentence and deciding whether the context is typycal for it or not, is not a fast way to check the spelling.
+I will not recommend this type of algorithm for spellcheckers with real-time speed limits, as rechecking every word in a sentence and deciding whether the context is typical for it or not, is not a fast way to check the spelling.
 
-Yet sometimes RWE are about 15% of all the errors, and in this case you  should deal with them some way. Most successful model dealing with RWEs is described in [4] - there you can find pseudocode based on word ngrams as a context. Other way to find RWEs is noisy channel model, which is not considered a xlassic approach anymore, yet can be effective in this kind of error detection.
+Yet sometimes RWE are about 15% of all the errors, and in this case, you  should deal with them some way. Most successful model for dealing with RWEs is described in [4] - there you can find pseudocode based on word ngrams as a context. Another way to find RWEs is the  noisy channel model, which is not considered a classic approach anymore, yet can be effective in this kind of error detection.
 
 Implementations:
 
