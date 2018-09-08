@@ -16,7 +16,7 @@ tags: [NLP, machine learning, data, open source]
  
 ## ML and Linguistics
 ### Spellchecking
- - [5 weird tricks for a good spellchecker](https://tatianashavrina.github.io/2018/08/30/spellcheck/)
+ - [5 weird tricks for a good spell-checker](https://tatianashavrina.github.io/2018/08/30/spellcheck/)
  
  
 ## Data is all you need:
