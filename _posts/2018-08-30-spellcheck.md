@@ -21,7 +21,9 @@ So, if we just want our spell-checker to work fast despite having a big dictiona
 
 I will now try to introduce 5 new algorithms and data structures that I use to optimize spell-checking. 
 
-So, getting started: there are two steps in spelling correction: firstly, you find error in the text, secondly, you choose the best correction.
+So, getting started: there are two steps in spelling correction: 
+  - firstly, you get a dictionary and find errors in the text, 
+  - secondly, you choose the best correction, ranging dictionary candidates
 
 
 ## Storing a dictionary
