@@ -21,7 +21,7 @@ tags: [NLP, machine learning, data, open source]
  
 ## Data is all you need:
 ### Data for Russian
- - [An exhaustive list of open-source datasets for Russian](lhttps://tatianashavrina.github.io/blog/2018/08/30/datasets/)
+ - [An exhaustive list of open-source corpora for Russian](https://tatianashavrina.github.io/blog/2018/08/30/datasets/)
  
  
  
