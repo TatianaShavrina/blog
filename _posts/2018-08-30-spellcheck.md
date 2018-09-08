@@ -7,7 +7,7 @@ description: >
 tags: [NLP, spellchecking, spelling correction]
 ---
 
-# A quick intro
+## A quick intro
 
 It is more than 10 years already Peter Norvig has put his sterlingly simple spell-checker into 21 line of [python code](https://norvig.com/spell-correct.html). A pure probability model selects the most probable replacement for an unknown word from the list of words collected in a book – this minimalistic approach is still quite relevant and can be considered as a baseline and a prototype for further development, however, it has a number of imperfections:
 
@@ -25,11 +25,11 @@ I will now try to introduce 5 new algorithms and data structures that I use to o
 
 So, getting started: there are two steps in spelling correction: firstly, you find error in the text, secondly, you choose the best correction.
 
-# Finding an error
+## Finding an error
 
-## Storing a dictionary:
+### Storing a dictionary:
 
-### Trie
+#### Trie
 Trie, aka radix tree or prefix tree, is a kind of search tree — an ordered tree data structure used to store a dynamic set or associative array where the keys are usually strings. It is kind of similar to binary search tree, but for language data - you have no >< conditions, but variants - what substring would be the next:
 ![](https://i.stack.imgur.com/f9Q3u.jpg)
 
@@ -44,20 +44,20 @@ Realizations:
 [Java](https://github.com/digitalstain/DoubleArrayTrie)
 
 
-## Approximate string matching
+### Approximate string matching
 
-### Bk-trees
+#### Bk-trees
 A BK-tree is a metric tree suggested by Walter Austin Burkhard and Robert M. Keller[1] specifically adapted to discrete metric spaces. For simplicity, let us consider integer discrete metric d ( x , y ) {\displaystyle d(x,y)} d(x,y). Then, BK-tree is defined in the following way. An arbitrary element a is selected as root node. The root node may have zero or more subtrees. The k-th subtree is recursively built of all elements b such that d ( a , b ) = k {\displaystyle d(a,b)=k} d(a,b)=k. BK-trees can be used for approximate string matching in a dictionary
 
-### Metaphone
+#### Metaphone
 
-## Real-word errors
+### Real-word errors
 
-# Choosing correction 
+## Choosing correction 
 
-## Distance measures
+### Distance measures
 
 
-# References
+## References
 
 [1] [ W. Burkhard and R. Keller. Some approaches to best-match file searching, CACM, 1973](https://dl.acm.org/citation.cfm?doid=362003.362025)
