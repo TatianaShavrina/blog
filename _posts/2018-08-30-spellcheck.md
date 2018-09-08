@@ -49,9 +49,10 @@ Realizations:
 
 ## Approximate string matching
 
-Now let's move to tricks with word distance and their fast 
+Now let's move to tricks with word distance and optimal candidate ranging.
 
 ### 2. Bk-trees
+
 A BK-tree is a metric tree suggested by Walter Austin Burkhard and Robert M. Keller[1] specifically adapted to discrete metric spaces. For simplicity, let us consider integer discrete metric d (x, y). Then, BK-tree is defined in the following way: an arbitrary element a is selected as root node. The root node may have zero or more subtrees. The k-th subtree is recursively built of all elements b such that d(a,b)=k. BK-trees can be used for approximate string matching in a dictionary:
 
 ![](https://nullwords.files.wordpress.com/2013/03/bk31-e1363207034407.png)
@@ -186,6 +187,10 @@ Implementations:
 ## References
 
 [1] [W. Burkhard and R. Keller. Some approaches to best-match file searching, CACM, 1973](https://dl.acm.org/citation.cfm?doid=362003.362025)
+
 [2] [Hanging on the Metaphone, Lawrence Philips. Computer Language, Vol. 7, No. 12 (December), 1990.](https://scinapse.io/papers/152126889)
+
 [3] [The Double Metaphone Search Algorithm, By Lawrence Phillips, June 1, 2000, Dr Dobb's](http://www.drdobbs.com/the-double-metaphone-search-algorithm/184401251?pgno=2)
+
 [4] [Flor M.(2012) Four types of context for automatic spelling correction //TAL.—Vol. 53.—Vol. 3.—pp. 61–99.](http://old.atala.org/IMG/pdf/Flor-TAL53-3.pdf)
+
