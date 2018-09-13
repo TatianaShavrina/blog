@@ -11,7 +11,7 @@ tags: [NLP, spellchecking, spelling correction]
 
 It is more than 10 years already Peter Norvig has put his sterlingly simple spell-checker into 21 line of [python code](https://norvig.com/spell-correct.html). A pure probability model selects the most probable replacement for an unknown word from the list of words collected in a book – this minimalistic approach is still quite relevant and can be considered as a baseline and a prototype for further development, however, it has a number of imperfections:
 
-1.	if your dictionary is big enough, (like millions of words), the candidate list will be too big to range it properly with this simple technique
+1.	if your dictionary is big enough, (like millions of words), the candidate list will be too big to rank it properly with this simple technique
 1. no restrictions on the speed and memory are provided for this solution
 1.	it cannot find real-word errors
 
@@ -73,7 +73,7 @@ Implementations:
 ### 3. Phonetic Algorithms
 
 Phonetic algorithms are widely used in spellchecking, as they can make the search of a close vocabulary word much more precise:
-  -  if you use some standard distance measure, which is based on letter alignment, the search is  usually limited to candidates standing 1-2 letters from a word with an error. If you increase this distance, you probably get too irrelevant candidates.
+  -  if you use some standard distance measure, which is based on letter alignment, the search is  usually limited to candidates standing 1-2 letters from a word with an error. If you increase this distance, you probably get too many of irrelevant candidates.
   - a lot of typical errors, caused by intentional distortion or slangy language gamification, outstand from a relevant candidate  more than 2 letters away: _riiiiigtht_ --> _right_, _donut_ --> _doughnut_, _ave_--> _avenue_
   - these far-from-a-right-candidate examples seem to be somehow systematically located: actually, these errors we can call "phonetic" or "abbreviative", and instead of using ordinary distance measures we can make a new, phonetic distance. Phonetic algorithms solve this problem quite well.
   
