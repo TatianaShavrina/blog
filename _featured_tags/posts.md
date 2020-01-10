@@ -9,6 +9,10 @@ tags: [NLP, machine learning, data, open source]
 
 ---
 
+## Paper Notes
+### NLP at NeurIPS 2019
+ - [NLP Highlights at NeurIPS 2019](https://tatianashavrina.github.io/2019/12/27/neurips/)
+ 
 
 ## How Tos:
 ### Youtube Crawling
