@@ -9,6 +9,12 @@ tags: [NLP, machine learning, data, open source]
 
 ---
 
+
+## How Tos:
+### Youtube Crawling
+ - [How to Make a Youtube Comment Corpus (without API)](https://tatianashavrina.github.io/2020/01/08/youtube/)
+ 
+
 ## Frequent errors in NLP Developement:
 ### Text Generation in Keras
  - [Why do my keras text generation results do not reproduce?](https://tatianashavrina.github.io/2018/08/30/keras/)
